@@ -1,0 +1,14 @@
+CREATE TABLE TaskEntity(
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+title TEXT NOT NULL
+);
+
+getTasks:
+SELECT * FROM  TaskEntity;
+
+addTask:
+INSERT OR REPLACE INTO TaskEntity(id,title) VALUES (?,?);
+
+deleteTask:
+DELETE  FROM TaskEntity WHERE id= :id;
+
